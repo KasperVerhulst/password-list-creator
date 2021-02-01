@@ -3,18 +3,15 @@ import tkinter as tk
 class GeneralTab(tk.Frame):
 
     TITLE = "General"
+    LANGUAGES = ["English", "Nederlands"]
 
-    def __init__(self,languages):
-        self.lannguage_drop_down = initialize_language_dropdown(languages)
-        self.size_scale = initialize_size_selector()
+    def __init__(self, tabcontrol):
+        super().__init__(tabcontrol)
+        self.lannguage_drop_down = self.initialize_language_dropdown(self.LANGUAGES)
 
-
-    def initialize_language_dropdown (self, languages):
+    def _initialize_language_dropdown_ (self, languages):
         default = tk.StringVar()
         default = languages[0]
         dropdown = tk.OptionMenu(self,default,*languages)
-
-        return 0
-
-    def initialize_size_selector():
-        return 0
+        dropdown.pack()
+        return dropdown

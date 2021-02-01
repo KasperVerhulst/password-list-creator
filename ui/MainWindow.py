@@ -1,6 +1,6 @@
 import tkinter as tk                     
 from tkinter import ttk 
-import ui.tabs.GeneralTab
+from ui.tabs.GeneralTab import GeneralTab
 
 class MainWindow(tk.Tk):
 
@@ -15,7 +15,7 @@ class MainWindow(tk.Tk):
 
 
     def _add_general_tab_ (self,tabcontrol):
-        tab = tk.Frame(tabcontrol)
+        tab = GeneralTab(tabcontrol)
         tabcontrol.add(tab, text = "test")
 
 
