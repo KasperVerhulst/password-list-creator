@@ -16,13 +16,15 @@ class MainWindow(tk.Tk):
 
     def _add_general_tab_ (self,tabcontrol):
         tab = GeneralTab(tabcontrol)
-        tabcontrol.add(tab, text = "test")
-
+        tabcontrol.add(tab, text = GeneralTab.TITLE)
 
 
     def _initialize_notebook_(self):
-        tabcontrol = ttk.Notebook(self)
-        tabcontrol.pack()
+        customed_style = ttk.Style()
+        customed_style.configure('Custom.TNotebook.Tab', padding=[5, 3], font=('Helvetica', 10))
+        customed_style.configure('Custom.TNotebook', tabposition='nw')
+        tabcontrol = ttk.Notebook(self, style='Custom.TNotebook')
+        tabcontrol.pack(fill="both", expand=True)
         return tabcontrol
 
 
