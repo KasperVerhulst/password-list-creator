@@ -22,8 +22,8 @@ class GeneralTab(tk.Frame):
         self.scale = self.initalize_scale()
 
     def initialize_language_dropdown (self, languages):
-        label = tk.Label(self, text = "Select language:", padx= 5 , pady=5)
-        label.grid(row=0, column=2) 
+        label = tk.Label(self, text = "Select language:")
+        label.grid(row=0, column=2, sticky="e", padx= 5 , pady=5) 
 
 
         dropdown = tk.ttk.Combobox(self,values=languages)
