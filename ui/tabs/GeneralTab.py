@@ -19,7 +19,7 @@ class GeneralTab(tk.Frame):
         for row in range(self.NB_ROWS):
             self.grid_rowconfigure(row, weight=1, uniform='third')
 
-        self.lannguage_drop_down = self.initialize_language_dropdown(self.LANGUAGES)
+        self.language_drop_down = self.initialize_language_dropdown(self.LANGUAGES)
         self.scale = self.initalize_scale()
         self.characters_selection = self.initialize_characters_selection()
 

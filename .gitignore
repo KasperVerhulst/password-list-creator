@@ -1,3 +1,4 @@
 *.pyc
 *.pyo
-ui/tabs/__pycache__/GeneralTab.cpython-39.pyc
+ui/tabs/__pycache__/*
+ui/__pycache__/*
