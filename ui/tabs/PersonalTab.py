@@ -6,6 +6,7 @@ class PersonalTab(tk.Frame):
     NUMBER_OF_RECORDS = 4
     MAX_NUMBER_OF_ENTRIES = 10
     NB_COLS = 3
+    INTRO="Enter some friends, children, spouse, pets that possible arise in the target's passwords"
 
     def __init__(self, tabcontrol):
         super().__init__(tabcontrol)
@@ -19,10 +20,16 @@ class PersonalTab(tk.Frame):
             self.grid_rowconfigure(row, weight=1, uniform='tenth')
 
 
-        for entry in range(self.NUMBER_OF_RECORDS):
+        self.create_explanoritory_label()
+
+        for entry in range(2,2+self.NUMBER_OF_RECORDS):
             self.initialize_row(entry)
 
 
+
+    def create_explanoritory_label(self):
+        explanation_label = tk.Label(self, text= self.INTRO)
+        explanation_label.grid(column=0, columnspan=3, row=0)
 
 
 
